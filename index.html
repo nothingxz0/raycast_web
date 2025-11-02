@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Entrepreneur's Journey - 3D Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="game-container">
+        <div id="loading">Loading...</div>
+        <div id="ui-overlay">
+            <div id="crosshair"></div>
+            <div id="info">
+                <p>Use WASD to move | Mouse to look around | ESC to unlock cursor</p>
+            </div>
+            
+            <!-- Minimap -->
+            <div id="minimap-container">
+                <canvas id="minimap"></canvas>
+            </div>
+            
+            <!-- Level info display -->
+            <div id="level-info">
+                <h2 id="level-title"></h2>
+                <p id="level-description"></p>
+            </div>
+            
+            <!-- Game Over Screen -->
+            <div id="game-over-screen" class="hidden">
+                <div class="modal-content">
+                    <h1 id="game-over-title"></h1>
+                    <p id="game-over-feedback"></p>
+                    <div id="game-over-lesson">
+                        <h3>📚 What You Should Learn:</h3>
+                        <p id="lesson-text"></p>
+                    </div>
+                    <blockquote id="quote-text"></blockquote>
+                    <button id="restart-btn">🔄 Try Again</button>
+                </div>
+            </div>
+            
+            <!-- Success Screen -->
+            <div id="success-screen" class="hidden">
+                <div class="modal-content">
+                    <h1 id="success-title"></h1>
+                    <p id="success-message"></p>
+                    <div id="mindsets-list"></div>
+                    <blockquote id="success-quote"></blockquote>
+                    <button id="restart-success-btn">🎮 Play Again</button>
+                </div>
+            </div>
+            
+            <!-- Intro Screen -->
+            <div id="intro-screen">
+                <div class="modal-content">
+                    <h1>🇲🇦 The Entrepreneur's Journey 🇲🇦</h1>
+                    <h2>A PIE Learning Experience</h2>
+                    <p>You're a young Moroccan student with a dream: to become an entrepreneur.</p>
+                    <p>But you have <strong>no money, no experience, and no clear idea</strong>.</p>
+                    <p>Your journey starts here. Each choice you make will shape your entrepreneurial mindset.</p>
+                    <p><strong>⚠️ Choose wisely!</strong> Bad choices end the game.</p>
+                    <button id="start-btn">🚀 Start Your Journey</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Three.js from CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    
+    <!-- Game scripts -->
+    <script src="storyline.js"></script>
+    <script src="raycast-engine.js"></script>
+    <script src="game.js"></script>
+</body>
+</html>
